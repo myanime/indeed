@@ -13,6 +13,31 @@ BOT_NAME = 'indeed'
 
 SPIDER_MODULES = ['indeed.spiders']
 NEWSPIDER_MODULE = 'indeed.spiders'
+FEED_EXPORTERS = {'csv': 'indeed.feedexport.CSVkwItemExporter'}
+EXPORT_FIELDS = [
+'jobNumber',
+'job_title',
+'job_location',
+'job_description',
+'original_link',
+'job_company',
+'job_money_unchanged',
+'job_money',
+'salary_description',
+'range_lower',
+'range_upper',
+'original_link_emails',
+#'original_link2_emails',
+#'original_link3_emails',
+'original_link_telephones',
+#'original_link2_telephones',
+#'original_link3_telephones',
+'image_src_link',
+'image_link',
+'job_date',
+'original_plain_text',
+'original_html',
+]
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
